@@ -18,8 +18,7 @@ public class AuthenticatedemoApplication {
 	public FilterRegistrationBean jwtFilter(){
 		FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean<>();
 		filterRegistrationBean.setFilter(new JwtFilter());
-		filterRegistrationBean.addUrlPatterns("/userdata/v1/fetchusers");
-		filterRegistrationBean.addUrlPatterns("/userdata/v1/{userid}");
+		filterRegistrationBean.addUrlPatterns("/userdata/v1/*");
 		return filterRegistrationBean;
 	}
 
